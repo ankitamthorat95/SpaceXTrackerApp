@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+
+        <ImageView
+            android:id="@+id/iv_callender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:src="@drawable/icon_calendar"
+            android:textColor="#75C7F0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="8dp"
+            app:layout_goneMarginTop="8dp"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:id="@+id/textViewLaunchDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_callender"
+            app:layout_constraintStart_toEndOf="@id/iv_callender"
+            app:layout_constraintTop_toTopOf="@+id/iv_callender"
+            tools:text="11:30pm,30 Sep 2020"
+            android:layout_marginLeft="4dp" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="#707070"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_callender"
+            app:layout_constraintEnd_toStartOf="@id/textViewLaunchStatus"
+            app:layout_constraintStart_toEndOf="@id/textViewLaunchDate"
+            app:layout_constraintTop_toTopOf="@+id/iv_callender" />
+
+        <ImageView
+            android:id="@+id/imgVerified"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_verified"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/textViewLaunchStatus"
+            app:layout_constraintTop_toTopOf="@+id/textViewLaunchStatus"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewLaunchStatus"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:id="@+id/textViewLaunchStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/opensans_semibold"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="#438420"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_callender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_callender"
+            android:layout_marginRight="8dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_rocket_svgrepo_com"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewLaunchStatus"
+            app:layout_constraintWidth_percent=".18"
+            app:layout_goneMarginTop="16dp"
+            android:layout_marginLeft="12dp"
+            />
+
+        <TextView
+            android:id="@+id/text_view_mission_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_bold"
+            android:maxLines="2"
+            android:textColor="#0C0C0C"
+            android:textSize="@dimen/visitor_text_size"
+            app:layout_constraintStart_toEndOf="@id/imgProfile"
+            app:layout_constraintTop_toTopOf="@id/imgProfile"
+            app:layout_goneMarginEnd="32dp"
+            tools:text="Mission xyz"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/text_view_rocket_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/imgProfile"
+            app:layout_constraintTop_toBottomOf="@id/text_view_mission_name"
+            app:layout_goneMarginEnd="32dp"
+            tools:text="Josh Software"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp" />
+
+
+        <ImageView
+            android:id="@+id/buttonFav"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_favorite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_goneMarginTop="0dp"
+            android:layout_marginRight="12dp" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#E4E4E4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

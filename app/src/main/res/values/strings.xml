@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SpaceXTrackerApp</string>
+    <string name="no_launches_found">No Launches Found</string>
+    <string name="rocket_name">Rocket Name</string>
+    <string name="rocket_type">Rocket Type</string>
+    <string name="rocket_nationality">Nationality</string>
+    <string name="rocket_payload_type">Payload Type</string>
+    <string name="rocket_payload_payload_mass_kg">Payload Mass (KG)</string>
+    <string name="rocket_payload_payload_mass_lbs">Payload Mass (lbs)</string>
+    <string name="rocket_orbit">Orbit</string>
+    <string name="rocket_overview">Rocket Overview</string>
+    <string name="launch_overview">Launch Overview</string>
+    <string name="launch_year">Launch Year</string>
+    <string name="launch_location">Location</string>
+    <string name="launch_status">Status</string>
+    <string name="link">Link</string>
+    <string name="launch_fail_reason">Reason of Failure</string>
+    <string name="failed">Failed</string>
+    <string name="successful">Successful</string>
+    <string name="search">Search</string>
+    <string name="dashboard_text">Dashboard</string>
+</resources>

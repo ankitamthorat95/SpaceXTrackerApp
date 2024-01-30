@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.activities.LaunchDetailsActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:paddingTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/closeImageView"
+                style="@style/CloseImageView"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:translationZ="10dp"
+                tools:ignore="MissingConstraints"
+                android:layout_marginRight="16dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/parentCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="-8dp"
+                app:cardCornerRadius="15dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/closeImageView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginHorizontal="14dp"
+                    android:background="@color/transparent"
+                    >
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_rocket_svgrepo_com"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        style="@style/App.DialogTitleTextView"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="95dp"
+                        android:layout_marginRight="95dp"
+                        android:textSize="14sp"
+                        android:text="mission Name"
+                        android:fontFamily="@font/opensans_regular"
+                        android:maxLines="2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imgProfile"
+                        app:layout_constraintTop_toTopOf="@+id/imgProfile"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
+                         />
+
+                    <TextView
+                        android:id="@+id/textViewLaunchDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="#131523"
+                        app:drawableStartCompat="@drawable/icon_calendar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/imgProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgVerified"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_verified"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewLaunchDate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/textViewStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="4dp"
+                        android:text="successful"
+                        android:textColor="@color/status_green_text_color"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toTopOf="@+id/imgVerified"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgVerified"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewLaunchDate"
+                        app:layout_constraintStart_toEndOf="@+id/imgVerified"
+                        />
+
+                    <TextView
+                        android:id="@+id/textViewDiscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="4dp"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewStatus"
+                        tools:text="11:30pm,30 Sep 2020"
+                         />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:alpha="0.3"
+                        android:background="#131523"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewDiscription" />
+
+
+                    <TextView
+                        android:id="@+id/textViewRocketDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/rocket_overview"
+                        android:textColor="#131523"
+                        android:textSize="14sp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@+id/divider1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.00" />
+
+                    <!--region rocket name-->
+                    <TextView
+                        android:id="@+id/textViewRocketName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rocket_name"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewRocketDetails"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketDetails"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/rocketName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewRocketName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/textViewRocketName"
+                        app:layout_constraintTop_toTopOf="@+id/textViewRocketName" />
+
+                    <!--endregion-->
+
+                    <!--region type-->
+                    <TextView
+                        android:id="@+id/textViewRocketType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/rocket_type"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewRocketName"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketName"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/rocketType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewRocketType"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/textViewRocketType"
+                        app:layout_constraintTop_toTopOf="@+id/textViewRocketType" />
+
+                    <!--endregion-->
+
+                    <!--region nationality-->
+                    <TextView
+                        android:id="@+id/textViewRocketNationality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/rocket_nationality"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewRocketType"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketType"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/rocketNationality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewRocketNationality"
+                        app:layout_constraintStart_toEndOf="@+id/textViewRocketNationality"
+                        app:layout_constraintTop_toTopOf="@+id/textViewRocketNationality" />
+
+                    <!--endregion-->
+
+                    <!--region payload type-->
+                    <TextView
+                        android:id="@+id/textViewRocketPayloadType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/rocket_payload_type"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewRocketNationality"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketNationality"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/rocketPayloadType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewRocketPayloadType"
+                        app:layout_constraintStart_toEndOf="@+id/textViewRocketPayloadType"
+                        app:layout_constraintTop_toTopOf="@+id/textViewRocketPayloadType" />
+
+                    <!--endregion-->
+
+                    <!--region payload mass kg-->
+                    <TextView
+                        android:id="@+id/textViewRocketPayloadMassKg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/rocket_payload_payload_mass_kg"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewRocketPayloadType"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketPayloadType"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/rocketPayloadMassKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewRocketPayloadMassKg"
+                        app:layout_constraintStart_toEndOf="@+id/textViewRocketPayloadMassKg"
+                        app:layout_constraintTop_toTopOf="@+id/textViewRocketPayloadMassKg" />
+
+                    <!--endregion-->
+
+                    <!--region payload mass lbs-->
+                    <TextView
+                        android:id="@+id/textViewRocketPayloadMasslbs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/rocket_payload_payload_mass_lbs"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewRocketPayloadMassKg"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketPayloadMassKg"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/rocketPayloadMasslbs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewRocketPayloadMasslbs"
+                        app:layout_constraintStart_toEndOf="@+id/textViewRocketPayloadMasslbs"
+                        app:layout_constraintTop_toTopOf="@+id/textViewRocketPayloadMasslbs" />
+
+                    <!--endregion-->
+
+                    <!--region orbit-->
+                    <TextView
+                        android:id="@+id/textViewRocketOrbit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/rocket_payload_payload_mass_lbs"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewRocketPayloadMasslbs"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketPayloadMasslbs"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/rocketOrbit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewRocketOrbit"
+                        app:layout_constraintStart_toEndOf="@+id/textViewRocketOrbit"
+                        app:layout_constraintTop_toTopOf="@+id/textViewRocketOrbit" />
+
+                    <!--endregion-->
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:alpha="0.3"
+                        android:background="#131523"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRocketOrbit" />
+
+
+                    <TextView
+                        android:id="@+id/textViewLaunchDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/rocket_overview"
+                        android:textColor="#131523"
+                        android:textSize="14sp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@+id/divider2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.00" />
+
+                    <!--region Lounch Site -->
+                    <TextView
+                        android:id="@+id/textViewLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/launch_location"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewLaunchDetails"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewLaunchDetails"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <TextView
+                        android:id="@+id/launchLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewLocation"
+                        app:layout_constraintStart_toEndOf="@+id/textViewLocation"
+                        app:layout_constraintTop_toTopOf="@+id/textViewLocation" />
+
+                    <!--endregion-->
+
+                    <!--region Lounch Status -->
+                    <TextView
+                        android:id="@+id/textViewLaunchStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/launch_status"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewLocation"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewLocation"
+                        app:layout_constraintWidth_percent="0.45" />
+
+
+                    <TextView
+                        android:id="@+id/launchStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewLaunchStatus"
+                        app:layout_constraintStart_toEndOf="@+id/textViewLaunchStatus"
+                        app:layout_constraintTop_toTopOf="@+id/textViewLaunchStatus" />
+
+                    <!--endregion-->
+
+                    <!--region reason -->
+                    <TextView
+                        android:id="@+id/textViewLaunchReason"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginVertical="8dp"                        android:text="@string/launch_fail_reason"
+                        android:textColor="#666666"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textViewLaunchStatus"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewLaunchStatus"
+                        app:layout_constraintWidth_percent="0.45" />
+
+
+                    <TextView
+                        android:id="@+id/launchReason"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        tools:text=""
+                        android:textSize="12sp"
+                        android:textColor="#333333"
+                        android:maxLines="4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/textViewLaunchReason"
+                        app:layout_constraintTop_toTopOf="@+id/textViewLaunchReason" />
+
+                    <!--endregion-->
+
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:alpha="0.3"
+                        android:background="#131523"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/launchReason" />
+
+
+                    <TextView
+                        android:id="@+id/textViewLinksDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/link"
+                        android:textColor="#131523"
+                        android:textSize="14sp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@+id/divider3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintVertical_bias="0.00" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/linkLayout"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewLinksDetails"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintVertical_bias="0.00"
+                        >
+
+                        <TextView
+                            android:id="@+id/btn_mission_patch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Patch"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_reddit_campaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reddit Campaign"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_reddit_recovery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reddit Recovery"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_reddit_media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reddit Media"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_presskit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="presskit"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_article_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="article_link"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_wikipedia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="wikipedia"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_video_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="video_link"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/btn_youtube_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="youtube_id"
+                            android:fontFamily="@font/opensans_regular"
+                            android:textColor="@color/colorPrimaryDarkBlue"
+                            app:drawableEndCompat="@drawable/ic_baseline_open_in_new_24"
+                            android:minHeight="0dp"
+                            />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:constraint_referenced_ids="btn_mission_patch,btn_reddit_campaign,btn_reddit_media,btn_reddit_recovery,btn_presskit,btn_article_link,btn_wikipedia,btn_video_link,btn_youtube_id"
+                            app:flow_wrapMode="chain"
+                            app:flow_horizontalStyle="packed"
+                            app:flow_horizontalGap="10dp"
+                            android:minHeight="0dp"
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
